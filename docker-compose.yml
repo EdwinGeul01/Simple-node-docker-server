@@ -1,0 +1,12 @@
+version: '1'
+
+services:
+  nodejs:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/home/app
+    command: "yarn run dev"
+    stdin_open: true # docker run -i
+    tty: true      
